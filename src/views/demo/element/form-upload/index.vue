@@ -1,17 +1,26 @@
 <template>
   <d2-container>
-    <h1 class="d2-mt-0">该页面尚未完成组件示例搬运</h1>
-    <p>D2Admin 的构建依托于由饿了么出品的 ElementUI，欲了解更多该组件的信息请查阅以下链接</p>
-    <d2-link-btn title="Element" link="http://element.eleme.io/#/zh-CN"/>
+    <el-upload
+      class="upload-demo"
+      drag
+      action="http://localhost:5000/upload/upload_blog"
+      name="upload"
+      multiple
+    >
+      <i class="el-icon-upload"></i>
+      <div class="el-upload__text">
+        将文件拖到此处，或
+        <em>点击上传</em>
+      </div>
+      <div class="el-upload__tip" slot="tip">只能上传jpg/png文件，且不超过500kb</div>
+    </el-upload>
   </d2-container>
 </template>
 
 <script>
 export default {
   data () {
-    return {
-      filename: __filename
-    }
+    return {}
   }
 }
 </script>
